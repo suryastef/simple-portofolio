@@ -59,7 +59,7 @@
   </nav>
 
   <!-- ======= Intro Section ======= -->
-  <div id="home" class="intro route bg-image" style="background-image: url({{ asset('storage/uploads/image/header/'.$getHeader->image ?? 'gambar' ) }}">
+  <div id="home" class="intro route bg-image" style="background-image: url('/images/header.jpg')">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -86,7 +86,7 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img src="{{ asset('storage/uploads/image/about/'.$getAbout->image ?? 'gambar' ) }}" style="height: 200px; object-fit: cover; object-position: center;" class="img-fluid rounded b-shadow-a" alt="">
+                        <img src="/images/profile.jpg" style="height: 200px; object-fit: cover; object-position: center;" class="img-fluid rounded b-shadow-a" alt="">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
