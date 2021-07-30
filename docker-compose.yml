@@ -10,7 +10,7 @@ services:
        MYSQL_ROOT_PASSWORD: 'root'
        MYSQL_DATABASE: 'laravel'
        MYSQL_USER: 'laravel'
-       MYSQL_PASSWORD: 'strong_password'
+       MYSQL_PASSWORD: 'laravel'
        TZ: "Asia/Jakarta"
      restart: unless-stopped
 
