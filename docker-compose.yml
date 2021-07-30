@@ -1,0 +1,40 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     container_name: laravel-mysql
+     volumes:
+       - db_data:/var/lib/mysql
+     environment:
+       MYSQL_ROOT_PASSWORD: 'root'
+       MYSQL_DATABASE: 'laravel'
+       MYSQL_USER: 'laravel'
+       MYSQL_PASSWORD: 'strong_password'
+       TZ: "Asia/Jakarta"
+     restart: unless-stopped
+
+   php:
+     depends_on:
+       - db
+     image: php:7.3-fpm-alpine
+     container_name: laravel-php
+     ports:
+       - "8000:8000"
+     environment:
+       TZ: "Asia/Jakarta"
+     volumes:
+       - "./web:/var/www/html"
+     restart: unless-stopped
+
+   adminer:
+     image: adminer
+     container_name: laravel-adminer
+     ports:
+       - 8080:8080
+     environment:
+       TZ: "Asia/Jakarta"
+     restart: unless-stopped
+
+volumes:
+    db_data: {}
