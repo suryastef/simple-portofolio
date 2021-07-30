@@ -4,20 +4,18 @@ MY-PFOLIO adalah aplikasi website portfolio dengan konten dinamis.
 </b></p>
 
 ## Instalasi
-- download zip <a href="https://github.com/rahmathidayat9/simple-portfolio/archive/master.zip">disini</a> 
-- atau clone : git clone https://github.com/rahmathidayat9/simple-portfolio.git
+```git clone https://github.com/suryastef/simple-portofolio.git```
 
 ## Setup
-- buka direktori project di terminal anda.
-- ketikan command : cp .env.example .env (copy paste file .env.example)
-- buat database 
+```cd simple-portofolio```
+```cp .env.example .env```
 
 Lalu ketik command dibawah ini
-- composer install
-- php artisan optimize:clear 
-- php artisan key:generate (generate app key)
-- php artisan migrate (migrasi database)
-- php artisan db:seed --class=UserClass (mengisi data table users)
+```composer install
+```php artisan optimize:clear```
+```php artisan key:generate```
+```php artisan migrate```
+```php artisan db:seed```
 
 ## Login
 Email : admin@gmail.com
@@ -87,6 +85,3 @@ Password : password
 <a href="https://github.com/rahmathidayat9/readme-images/blob/master/simple-portfolio/Screenshot%20(797).png?raw=true">
 	<img src="https://github.com/rahmathidayat9/readme-images/blob/master/simple-portfolio/Screenshot%20(797).png?raw=true">
 </a>
-
-## Author
-- Rahmat Hidayatullah
