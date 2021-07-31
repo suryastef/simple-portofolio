@@ -202,7 +202,7 @@
                     </div>
                     <div class="socials">
                       <ul>
-                        <li><a href="javascript:void(0)" onclick="window.open('https://github,com/suryastef')"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                        <li><a href="javascript:void(0)" onclick="window.open('https://github.com/suryastef')"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
                       </ul>
                     </div>
                   </div>
