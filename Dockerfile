@@ -14,7 +14,7 @@ RUN cp .env.example .env && \
 RUN docker-php-ext-install mysqli pdo pdo_mysql && \
     composer install && \
     php artisan optimize:clear && \
-    php artisan key:generate && \
+    php artisan key:generate
 
 # Running the web service
 EXPOSE 80
