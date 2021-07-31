@@ -1,5 +1,4 @@
 FROM php:7.3-fpm-alpine
-RUN docker-php-ext-install mysqli pdo pdo_mysql
 WORKDIR /app
 ADD . /app
 
@@ -11,12 +10,13 @@ RUN cp .env.example .env && \
     php -r "unlink('composer-setup.php');" && \
     mv composer.phar /usr/local/bin/composer
 
-# Deploying project
-RUN composer install
-RUN php artisan optimize:clear
-RUN php artisan key:generate
-RUN php artisan migrate
-RUN php artisan db:seed
+# preparing project
+RUN docker-php-ext-install mysqli pdo pdo_mysql && \
+    composer install && \
+    php artisan optimize:clear && \
+    php artisan key:generate && \
+    php artisan migrate && \
+    php artisan db:seed
 
 # Running the web service
 EXPOSE 80
