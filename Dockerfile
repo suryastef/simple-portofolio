@@ -18,5 +18,5 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql && \
 
 # Running the web service
 EXPOSE 80
-COPY ./run.sh /tmp    
+COPY ./run.sh /tmp
 ENTRYPOINT ["/tmp/run.sh"]
