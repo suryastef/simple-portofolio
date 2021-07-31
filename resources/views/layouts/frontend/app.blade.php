@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>{{ $getHeader->title ?? 'MY-PFOLIO' }}</title>
+  <title>{{ $getHeader->title ?? 'Suryastef | Sysadmin, DevOps' }}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
