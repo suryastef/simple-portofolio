@@ -65,8 +65,8 @@
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">{{ $getHeader->up_text ?? 'I am Rahmat Hidayatullah' }}</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">{{ $getHeader->down_text ?? 'Iam Student,Gamer' }}</span><strong class="text-slider"></strong></p>
+          <h1 class="intro-title mb-4">{{ $getHeader->up_text ?? 'I am Surya Stefanus' }}</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">{{ $getHeader->down_text ?? 'I am System Administrator,Student,Gamer' }}</span><strong class="text-slider"></strong></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
       </div>
@@ -91,10 +91,10 @@
                     </div>
                     <div class="col-sm-6 col-md-7">
                       <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>{{ $getAbout->name ?? 'Rahmat Hidayatullah' }}</span></p>
-                        <p><span class="title-s">Profile: </span> <span>{{ $getAbout->role ?? 'Student' }}</span></p>
-                        <p><span class="title-s">Email: </span> <span>{{ $getAbout->email ?? 'ratuaddil432@gmail.com' }}</span></p>
-                        <p><span class="title-s">Phone: </span> <span>{{ $getAbout->phone ?? '0859987263' }}</span></p>
+                        <p><span class="title-s">Name: </span> <span>{{ $getAbout->name ?? 'Surya Stefanus' }}</span></p>
+                        <p><span class="title-s">Occupation: </span> <span>{{ $getAbout->role ?? 'System Administrator' }}</span></p>
+                        <p><span class="title-s">Email: </span> <span>{{ $getAbout->email ?? 'suryastef@gmail.com' }}</span></p>
+                        <p><span class="title-s">Phone: </span> <span>{{ $getAbout->phone ?? '+62 8999-7576-93' }}</span></p>
                       </div>
                     </div>
                   </div>
@@ -117,7 +117,10 @@
                       </h5>
                     </div>
                     <p class="lead">
-                      {{ $getAbout->description ?? 'This is about description ok' }}
+                      {{ $getAbout->description ?? 'I am a highly competent IT professional with plentiful knowledge and experience with DevOps tools, networking and managing servers. 
+                        I have strong technical skills as well as excellent interpersonal skills, enabling me to interact with a wide range of clients. 
+                        I am eager to be challenged in order to grow and further improve my IT skills. 
+                        My greatest passion in life is using my technical know-how to benefit other people and organisations.' }}
                     </p>
                   </div>
                 </div>
@@ -184,7 +187,7 @@
                   <div class="col-md-6 mx-auto">
                     <div class="title-box-2 pt-4 pt-md-0">
                       <h5 class="title-left">
-                        {{ $getFooter->title ?? 'Footer Title'  }}
+                        {{ $getFooter->title ?? 'Contact me'  }}
                       </h5>
                     </div>
                     <div class="more-info">
@@ -192,14 +195,14 @@
                        {{ $getFooter->description ?? 'Footer desription here' }}
                       </p>
                       <ul class="list-ico">
-                        <li><span class="ion-ios-location"></span> {{ $getFooter->address ?? 'Footer Address'  }}</li>
-                        <li><span class="ion-ios-telephone"></span> {{ $getFooter->phone ?? 'Footer Phone'  }}</li>
-                        <li><span class="ion-email"></span> {{ $getFooter->email ?? 'Footer Email'  }}</li>
+                        <li><span class="ion-ios-location"></span> {{ $getFooter->address ?? 'Bogor, West Java'  }}</li>
+                        <li><span class="ion-ios-telephone"></span> {{ $getFooter->phone ?? '+62 8999-7576-93'  }}</li>
+                        <li><span class="ion-email"></span> {{ $getFooter->email ?? 'suryastef@gmail.com'  }}</li>
                       </ul>
                     </div>
                     <div class="socials">
                       <ul>
-                        <li><a href="javascript:void(0)" onclick="window.open('https://web.facebook.com/profile.php?id=100050205264012')"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                        <li><a href="javascript:void(0)" onclick="window.open('https://github,com/suryastef')"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -219,7 +222,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>{{ $getFooter->copyright ?? 'Footer Copyright'  }}</strong>. All Rights Reserved</p>
+            <p class="copyright">&copy; Copyright <strong>{{ $getFooter->copyright ?? 'Surya Stefanus'  }}</strong>. All Rights Reserved</p>
             <div class="credits">
               <!--
               All the links in the footer should remain intact.
@@ -227,7 +230,7 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
             -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              Designed by <a href="https://bootstrapmade.com/">Me</a>
             </div>
           </div>
         </div>
