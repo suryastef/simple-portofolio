@@ -17,14 +17,12 @@ services:
    php:
      depends_on:
        - db
-     image: php:7.3-fpm-alpine
+     build: .
      container_name: laravel-php
      ports:
-       - "8000:8000"
+       - "80:80"
      environment:
        TZ: "Asia/Jakarta"
-     volumes:
-       - "./web:/var/www/html"
      restart: unless-stopped
 
    adminer:
