@@ -15,9 +15,8 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql && \
     composer install && \
     php artisan optimize:clear && \
     php artisan key:generate && \
-    php artisan migrate && \
-    php artisan db:seed
 
 # Running the web service
 EXPOSE 80
-CMD php artisan serve --host=0.0.0.0 --port=80
+COPY ./run.sh /tmp    
+ENTRYPOINT ["/tmp/run.sh"]
