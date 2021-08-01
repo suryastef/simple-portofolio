@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     container_name: laravel-mysql_simple-portofolio
+     volumes:
+       - db_data:/var/lib/mysql
+     environment:
+       MYSQL_ROOT_PASSWORD: 'root'
+       MYSQL_DATABASE: 'laravel'
+       MYSQL_USER: 'laravel'
+       MYSQL_PASSWORD: 'laravel'
+       TZ: "Asia/Jakarta"
+     restart: unless-stopped
+
+   php:
+     depends_on:
+       - db
+     image: suryastef/simple-portofolio
+     container_name: laravel-php_simple-portofolio
+     ports:
+       - "80:80"
+     environment:
+       TZ: "Asia/Jakarta"
+     restart: unless-stopped
+
+volumes:
+    db_data: {}
