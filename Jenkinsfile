@@ -6,7 +6,7 @@ pipeline {
         dockerImage = ''
     }
     stages {
-        stage("Docker build") {
+        stage("Build") {
             steps {
               script {
                   dockerImage = docker.build imagename
@@ -22,7 +22,7 @@ pipeline {
               }
             }
         }
-        stage("Docker push") {
+        stage("Push to registry") {
             steps {
               script{
                 docker.withRegistry( '', registryCredential ) {
