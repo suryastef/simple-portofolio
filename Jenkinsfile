@@ -16,9 +16,11 @@ pipeline {
         }
         stage("Unit test") {
             steps {
+              script{
                 dockerImage.inside {
                     'php artisan test'
                 }
+              }
             }
         }
         stage("Docker push") {
