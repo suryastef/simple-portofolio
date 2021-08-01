@@ -3,7 +3,7 @@ version: '3.3'
 services:
    db:
      image: mysql:5.7
-     container_name: laravel-mysql
+     container_name: laravel-mysql_simple-portofolio
      volumes:
        - db_data:/var/lib/mysql
      environment:
@@ -17,8 +17,11 @@ services:
    php:
      depends_on:
        - db
-     build: .
-     container_name: laravel-php
+     build:
+       - context: .
+       - dockerfile: Dockerfile
+     image: suryastef/simple-portofolio
+     container_name: laravel-php_simple-portofolio
      ports:
        - "80:80"
      environment:
