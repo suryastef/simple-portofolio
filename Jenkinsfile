@@ -9,6 +9,8 @@ pipeline {
         stage("Build") {
             steps {
                 checkout scm
+                sh 'curl -s https://getcomposer.org/installer | php'
+                sh 'mv composer.phar /usr/local/bin/composer'
                 sh 'php --version'
                 sh 'composer install'
                 sh 'composer --version'
