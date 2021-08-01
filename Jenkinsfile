@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    checkout scm
     environment {
         imagename = "suryastef/simple-portofolio"
         registryCredential = 'suryastef-dockerhub'
