@@ -1,35 +1,24 @@
 pipeline {
     agent any
+    checkout scm
     environment {
         imagename = "suryastef/simple-portofolio"
         registryCredential = 'suryastef-dockerhub'
         dockerImage = ''
     }
     stages {
-        stage("Build") {
-            steps {
-                checkout scm
-                sh 'curl -s https://getcomposer.org/installer | php'
-                sh 'mv composer.phar /usr/local/bin/composer'
-                sh 'php --version'
-                sh 'composer install'
-                sh 'composer --version'
-                sh 'cp .env.example .env'
-                sh 'php artisan key:generate'
-                sh 'cp .env .env.testing'
-                sh 'php artisan migrate'
-            }
-        }
-        stage("Unit test") {
-            steps {
-                sh 'php artisan test'
-            }
-        }
         stage("Docker build") {
             steps {
               script {
                   dockerImage = docker.build imagename
               }
+            }
+        }
+        stage("Unit test") {
+            steps {
+                dockerImage.inside {
+                    'php artisan test'
+                }
             }
         }
         stage("Docker push") {
