@@ -34,7 +34,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "ansible-playbook /etc/ansible/playbook/playbook-production-run.yml"
+                sh "ansible-playbook -i /root/production_host /root/production.yml"
             }
         }
         stage('Remove Unused docker image') {
