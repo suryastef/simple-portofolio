@@ -11,7 +11,7 @@ MY-PFOLIO adalah aplikasi website portfolio dengan konten dinamis.
 ```cp .env.example .env```
 
 Lalu ketik command dibawah ini
-```composer install
+```composer install```
 ```php artisan optimize:clear```
 ```php artisan key:generate```
 ```php artisan migrate```
