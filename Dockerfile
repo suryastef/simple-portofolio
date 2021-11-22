@@ -1,8 +1,9 @@
 FROM php:7.3-fpm-alpine
 WORKDIR /app
 ADD . /app
+RUN cp .env.example .env
 
-# Composer instalation
+# Composer installation
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 # preparing project
